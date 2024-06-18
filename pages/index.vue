@@ -152,6 +152,7 @@
               <div
                 class="anchor-skills"
                 tabindex="0"
+                tabbable="true"
                 @click="toggleAnchors('Skills')"
               >
                 <PhosphorIconBrain
@@ -169,7 +170,11 @@
           <nav class="summary">
             <ul>
               <li>
-                <div class="anchor-history" @click="toggleAnchors('History')">
+                <div
+                  class="anchor-history"
+                  tabindex="0"
+                  @click="toggleAnchors('History')"
+                >
                   <PhosphorIconBriefcase
                     :size="32"
                     color="#fff"
@@ -180,7 +185,11 @@
                 </div>
               </li>
               <li>
-                <div class="anchor-study" @click="toggleAnchors('Study')">
+                <div
+                  class="anchor-study"
+                  tabindex="0"
+                  @click="toggleAnchors('Study')"
+                >
                   <PhosphorIconGraduationCap
                     :size="32"
                     color="#fff"
@@ -191,7 +200,11 @@
                 </div>
               </li>
               <li>
-                <div class="anchor-skills" @click="toggleAnchors('Skills')">
+                <div
+                  class="anchor-skills"
+                  tabindex="0"
+                  @click="toggleAnchors('Skills')"
+                >
                   <PhosphorIconBrain
                     :size="32"
                     color="#fff"
