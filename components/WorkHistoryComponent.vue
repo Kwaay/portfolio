@@ -1,6 +1,6 @@
 <template>
   <div
-    v-for="{ startDate, endDate, title, location, details } in history"
+    v-for="{ startDate, endDate, title, location, details, learned } in history"
     :key="title"
     class="work-experience"
   >
@@ -11,6 +11,13 @@
       <h1>{{ title }}</h1>
       <h2>{{ location }}</h2>
       <p>{{ details }}</p>
+      <div class="learned-container">
+        <h2>Compétences apprises :</h2>
+        <div v-for="item in learned" :key="item.name" class="learned">
+          <img :src="`/portfolio/${item.icon}`" :alt="item.name" />
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -52,6 +59,23 @@ import history from '~/data/history';
   border-radius: 10px;
   display: block;
   text-align: center;
+}
+
+.learned-container {
+  display: flex;
+  gap: 10px;
+}
+
+.learned {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.learned img {
+  max-width: 24px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {

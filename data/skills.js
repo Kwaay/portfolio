@@ -136,6 +136,10 @@ const skills = [
         name: 'Notion',
         icon: '/icons/notion.png',
       },
+      {
+        name: 'Storybook',
+        icon: '/icons/storybook.png',
+      },
     ],
   },
 ];
