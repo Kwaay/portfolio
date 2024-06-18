@@ -29,12 +29,12 @@
                       weight="fill"
                       class="icon"
                     />
-                    <span>Benoit DUMONT</span>
+
                     <NuxtLink
                       to="https://www.linkedin.com/in/benoit-dumont/"
                       external
                       target="_blank"
-                    >
+                      ><span>Benoit DUMONT</span>
                       <PhosphorIconArrowSquareOut
                         :size="24"
                         color="#466fff"
@@ -51,8 +51,8 @@
                       weight="regular"
                       class="icon"
                     />
-                    <span>Mail</span>
                     <NuxtLink to="mailto:contact.dumont-benoit.fr">
+                      <span>Mail</span>
                       <PhosphorIconArrowSquareOut
                         :size="24"
                         color="#466fff"
@@ -69,12 +69,13 @@
                       weight="regular"
                       class="icon"
                     />
-                    <span>Github</span>
                     <NuxtLink
                       to="https://github.com/Kwaay"
                       external
                       target="_blank"
                     >
+                      <span>Github</span>
+
                       <PhosphorIconArrowSquareOut
                         :size="24"
                         color="#466fff"
@@ -118,7 +119,11 @@
         <nav class="summary-out">
           <ul>
             <li>
-              <div class="anchor-history" @click="toggleAnchors('History')">
+              <div
+                class="anchor-history"
+                tabindex="0"
+                @click="toggleAnchors('History')"
+              >
                 <PhosphorIconBriefcase
                   :size="32"
                   color="#fff"
@@ -129,7 +134,11 @@
               </div>
             </li>
             <li>
-              <div class="anchor-study" @click="toggleAnchors('Study')">
+              <div
+                class="anchor-study"
+                tabindex="0"
+                @click="toggleAnchors('Study')"
+              >
                 <PhosphorIconGraduationCap
                   :size="32"
                   color="#fff"
@@ -140,7 +149,11 @@
               </div>
             </li>
             <li>
-              <div class="anchor-skills" @click="toggleAnchors('Skills')">
+              <div
+                class="anchor-skills"
+                tabindex="0"
+                @click="toggleAnchors('Skills')"
+              >
                 <PhosphorIconBrain
                   :size="32"
                   color="#fff"
@@ -385,6 +398,10 @@ main {
   color: #fdfdfe;
 }
 
+.about-me p {
+  padding-left: 5%;
+}
+
 .dl-button {
   text-align: center;
   padding: 1em 2em;
@@ -405,6 +422,14 @@ main {
 .socials-linkedin,
 .socials-mail,
 .socials-github {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials-linkedin a,
+.socials-mail a,
+.socials-github a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -490,6 +515,10 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+
+  .about-me p {
+    padding-left: initial;
   }
 
   .right-content {
