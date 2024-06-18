@@ -64,6 +64,8 @@ import history from '~/data/history';
 .learned-container {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .learned {
